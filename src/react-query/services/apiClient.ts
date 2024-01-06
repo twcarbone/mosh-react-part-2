@@ -11,8 +11,6 @@ class APIClient<T> {
     this.endpoint = endpoint;
   }
 
-  // Methods need to be arrow functions to work with react-query
-
   getAll = () => {
     return axiosInstance.get<T[]>(this.endpoint).then((res) => res.data);
   };
